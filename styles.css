@@ -1,0 +1,257 @@
+/* ==================== VARIABLES Y ESTILOS GLOBALES ==================== */
+:root {
+    --primary-color: #ff6347; /* Tomate */
+    --secondary-color: #333;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --white-color: #fff;
+    --shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+section {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: transform 0.3s, background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e5533d;
+    transform: translateY(-3px);
+}
+
+/* ==================== HEADER / NAVEGACIÓN ==================== */
+header {
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 8px 18px;
+    border-radius: 50px;
+}
+.btn-nav:hover {
+    color: var(--white-color);
+    background-color: #e5533d;
+}
+
+/* ==================== SECCIONES ==================== */
+main {
+    padding-top: 80px; /* Ajuste para el header fijo */
+}
+
+/* Inicio */
+#inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1965&auto=format&fit=crop') no-repeat center center/cover;
+    color: var(--white-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+#inicio h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Tamaño de fuente adaptable */
+    margin-bottom: 1rem;
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* Menú */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu-item {
+    background: var(--white-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    width: 320px;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 1rem 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Contacto y Pago */
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: transparent;
+}
+
+form button {
+    align-self: center;
+}
+
+/* Ubicación */
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 1rem auto 0 auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* ==================== DISEÑO RESPONSIVO ==================== */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Simplificado para el ejemplo, se podría implementar un menú hamburguesa */
+    }
+    
+    #inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+}
